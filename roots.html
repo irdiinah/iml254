@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Roots | Echoes of Dina</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="roots-page">
+
+<div class="navbar">
+
+  <a href="index.html">Homepage</a>
+
+  <!-- PROFILE -->
+  <div class="dropdown">
+    <a href="profile.html">Profile </a>
+    <div class="dropdown-content">
+      <a href="profile.html#identity">Identity</a>
+      <a href="profile.html#preferences">Preferences</a>
+    </div>
+  </div>
+
+  <!-- RELATIONS -->
+  <div class="dropdown">
+    <a href="relations.html">Relations </a>
+    <div class="dropdown-content">
+      <a href="relations.html#familycard">Family Card</a>
+      <a href="relations.html#acquaintances">Acquaintances</a>
+      <a href="relations.html#beloveds">Beloveds</a>
+    </div>
+  </div>
+
+  <!-- ROOTS -->
+  <div class="dropdown">
+    <a href="roots.html">Roots </a>
+    <div class="dropdown-content">
+      <a href="roots.html#hometown">Hometown</a>
+      <a href="roots.html#academia">Academia</a>
+    </div>
+  </div>
+
+  <!-- PASTIMES -->
+  <div class="dropdown">
+    <a href="pastimes.html">Pastimes </a>
+    <div class="dropdown-content">
+      <a href="pastimes.html#trinkets">Trinkets</a>
+      <a href="pastimes.html#screentales">Screen Tales</a>
+      <a href="pastimes.html#whatnot">Whatnot</a>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="dropdown">
+    <a href="archive.html">Archive </a>
+    <div class="dropdown-content">
+      <a href="archive.html#ephemeral">Ephemeral</a>
+    </div>
+  </div>
+
+  <!-- GUESTBOOK -->
+  <div class="dropdown">
+    <a href="guetbook.html">Guestbook </a>
+  </div>
+
+</div>
+
+
+
+
+<!-- =========================
+     HOMETOWN SECTION
+========================= -->
+
+<section id="hometown" class="hometown-section">
+
+
+  <!-- ⋆.˚ HEADER ⋆.˚ ᡣ𐭩 .˚-->
+  <div class="hometown-header">
+
+    <h1>⋆.˚ Hometown ⋆.˚ ᡣ𐭩 .˚</h1>
+
+</div>
+
+  <!-- SLIDESHOW -->
+  <div class="hometown-slider">
+
+    <button class="arrow left" onclick="prevSlide()">‹</button>
+
+    <img id="slideImg" src="images/ht1.jpg" alt="hometown">
+
+    <button class="arrow right" onclick="nextSlide()">›</button>
+
+</div>
+  <!-- DESCRIPTION -->
+  <div class="hometown-desc">
+    <p id="descText"></p>
+  </div>
+ </div>
+</section>
+
+
+
+
+<!-- =========================
+ACADEMIA SECTION
+========================= -->
+
+<section id="academia" class="academia-section">
+
+  <!-- LEFT MAIN ARTICLE -->
+  <div class="academia-main">
+
+    <img id="mainEduImage"
+         src="images/edu0.jpg"
+         alt="Academia">
+
+    <div class="academia-content">
+
+      <h1>Academic Journey</h1>
+
+      <p class="edu-tag">
+       2 COOL 4 SKUL • @irdiinah
+      </p>
+
+    
+
+    </div>
+
+    <!-- VERTICAL SCROLL BAR -->
+    <div class="academia-scroll">
+      <button onclick="scrollMain(-300)">▲</button>
+      <button onclick="scrollMain(300)">▼</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PLAYLIST -->
+  <div class="academia-playlist">
+
+<h2>ACADEMIA JOURNAL</h2>
+    <div class="edu-item"
+      onclick="changeEdu(
+      'images/edu1.jpg',
+      'TADIKA PASTI',
+      'First steps into academic journey :3')">
+
+      <img src="images/edu1.jpg">
+
+      <div>
+        <h3>TADIKA PASTI</h3>
+        <p>Foundation • Learning</p>
+      </div>
+
+    </div>
+
+
+    <div class="edu-item"
+      onclick="changeEdu(
+      'images/edu4.jpg',
+      'SK SUBANG BESTARI',
+      'Learn to be a floater friend until I found my people.')">
+
+      <img src="images/edu4.jpg">
+
+      <div>
+        <h3>SK SUBANG BESTARI</h3>
+        <p>Outcasted • Experience</p>
+      </div>
+
+    </div>
+
+    <div class="edu-item"
+      onclick="changeEdu(
+      'images/edu5.jpg',
+      'SMK SUBANG BESTARI',
+      'Young, dumb, broke highscool kids ')">
+
+      <img src="images/edu5.jpg">
+
+      <div>
+        <h3>SMK SUBANG BESTARI</h3>
+        <p>Bittersweet • True colour</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function changeEdu(image,title,text){
+
+document.getElementById("mainEduImage").src=image;
+
+document.querySelector(".academia-content h1").innerHTML=title;
+
+document.querySelector(".academia-content p:last-child").innerHTML=text;
+
+}
+
+function scrollMain(amount){
+
+document.querySelector(".academia-main")
+.scrollBy({
+top:amount,
+behavior:"smooth"
+});
+
+}
+</script>
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Echoes of Dina <br>
+  Recommended Browser: Google Chrome; Resolution: 1366 × 768 or above
+</footer>
+
+<!-- ⭐ BACK TO TOP BUTTON -->
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+★
+</button>
+
+<!-- ⭐ SHOW/HIDE SCRIPT -->
+<script>
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+</script>
+
+</body>
+</html>
+
+<script>
+let images = [
+  "images/ht1.jpg" ,
+  "images/ht2.jpg",
+  "images/ht3.jpg"
+];
+
+let descriptions = [
+  "I was born at Hospital Selayang. It's pretty far from my house but I never questioned it loudly.",
+  "Since childhood, my family has been always celebarting any holidays at my my mom's side, which is at at Sabak Bernam. My dad is an orphan.",
+  "Sweet moments here at my dad's side of kampung, in Tanjong Karang is when me and my family 'mandi palong' it was great. Just too many caterpillar swimming with us 🐛🌾 ",
+
+];
+
+let index = 0;
+
+let img = document.getElementById("slideImg");
+let desc = document.getElementById("descText");
+
+/* LOAD FIRST */
+function updateSlide(){
+  img.src = images[index];
+  desc.textContent = descriptions[index];
+}
+
+/* NEXT */
+function nextSlide(){
+  index = (index + 1) % images.length;
+  updateSlide();
+}
+
+/* PREV */
+function prevSlide(){
+  index = (index - 1 + images.length) % images.length;
+  updateSlide();
+}
+
+
+
+/* MUSIC TOGGLE */
+function toggleMusic(){
+  let music = document.getElementById("bgmusic");
+  music.paused ? music.play() : music.pause();
+}
+
+/* INIT */
+updateSlide();
+</script>
+
+</body>
+</html>
