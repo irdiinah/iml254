@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Archive | Echoes of Dina</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="archive-page">
+
+<div class="navbar">
+  <a href="index.html">Homepage</a>
+
+<!-- PROFILE -->
+  <div class="dropdown">
+    <a href="profile.html">Profile </a>
+    <div class="dropdown-content">
+      <a href="profile.html#identity">Identity</a>
+      <a href="profile.html#preferences">Preferences</a>
+    </div>
+  </div>
+
+  <!-- RELATIONS -->
+  <div class="dropdown">
+    <a href="relations.html">Relations </a>
+    <div class="dropdown-content">
+      <a href="relations.html#familycard">Family Card</a>
+      <a href="relations.html#acquaintances">Acquaintances</a>
+      <a href="relations.html#beloveds">Beloveds</a>
+    </div>
+  </div>
+
+  <!-- ROOTS -->
+  <div class="dropdown">
+    <a href="roots.html">Roots </a>
+    <div class="dropdown-content">
+      <a href="roots.html#hometown">Hometown</a>
+      <a href="roots.html#academia">Academia</a>
+    </div>
+  </div>
+
+  <!-- PASTIMES -->
+  <div class="dropdown">
+    <a href="pastimes.html">Pastimes </a>
+    <div class="dropdown-content">
+      <a href="pastimes.html#trinkets">Trinkets</a>
+      <a href="pastimes.html#screentales">Screen Tales</a>
+      <a href="pastimes.html#whatnot">Whatnot</a>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="dropdown">
+    <a href="archive.html">Archive </a>
+    <div class="dropdown-content">
+      <a href="archive.html#ephemeral">Ephemeral</a>
+    </div>
+  </div>
+
+  <!-- GUESTBOOK -->
+  <div class="dropdown">
+    <a href="guetbook.html">Guestbook </a>
+  </div>
+
+</div>
+
+<!-- HEADER SECTION -->
+<section class="archive-header">
+
+  <h1>⋆.˚✮ Ephemeral⋆.✮˚.⋆</h1>
+ 
+
+  <div class="archive-banner">
+
+    <img id="bannerImg" src="images/arv1.jpg">
+
+    <button class="music-toggle" onclick="toggleMusic()">♫</button>
+
+    <audio id="music" loop>
+      <source src="songs/clairo.mp3" type="audio/mpeg">
+    </audio>
+
+  </div>
+
+</section>
+
+
+<!-- MODAL -->
+<div id="imgModal" onclick="closeImg()">
+  <img id="modalImg">
+</div>
+
+
+
+
+
+<div class="euphoria-header">
+  <h1>✧˖°📷 ༘ ⋆｡ ˚Euphoria༘ ⋆｡ ˚</h1>
+  <p>little fragments of light memories</p>
+</div>
+
+<section class="euphoria-section">
+
+  <!-- TOP ROW -->
+  <div class="euphoria-row">
+
+    <img src="images/arv7.jpg" onclick="openEuphoria(this.src)">
+    <img src="images/arv8.jpg" onclick="openEuphoria(this.src)">
+    <img src="images/arv9.jpg" onclick="openEuphoria(this.src)">
+    <img src="images/arv10.jpg" onclick="openEuphoria(this.src)">
+    <img src="images/arv11.jpg" onclick="openEuphoria(this.src)">
+
+  </div>
+
+  <!-- BUTTON -->
+  <div class="euphoria-center">
+    <button onclick="viewAllEuphoria()">View all</button>
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="euphoriaModal" onclick="closeEuphoria()">
+  <img id="euphoriaImg">
+</div>
+
+<script>
+
+/* SLIDESHOW */
+let banners = ["images/arv1.jpg", "images/arv3.jpg"];
+let i = 0;
+
+setInterval(() => {
+  i = (i + 1) % banners.length;
+  document.getElementById("bannerImg").src = banners[i];
+}, 3000);
+
+/* MUSIC */
+function toggleMusic(){
+  let m = document.getElementById("music");
+  m.paused ? m.play() : m.pause();
+}
+
+/* IMAGE MODAL (ARCHIVE GRID) */
+function openImg(src){
+  document.getElementById("modalImg").src = src;
+  document.getElementById("imgModal").style.display = "flex";
+}
+
+function closeImg(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+/* EUPHORIA MODAL */
+const euphoriaImages = [
+  "images/arv7.jpg",
+  "images/arv8.jpg",
+  "images/arv9.jpg",
+  "images/arv10.jpg",
+  "images/arv11.jpg"
+];
+
+let eIndex = 0;
+let autoPlay = null;
+
+function openEuphoria(src){
+  document.getElementById("euphoriaModal").style.display = "flex";
+  document.getElementById("euphoriaImg").src = src;
+}
+
+function closeEuphoria(){
+  document.getElementById("euphoriaModal").style.display = "none";
+  clearInterval(autoPlay);
+}
+
+/* VIEW ALL SLIDESHOW */
+function viewAllEuphoria(){
+  const modal = document.getElementById("euphoriaModal");
+  const img = document.getElementById("euphoriaImg");
+
+  modal.style.display = "flex";
+
+  eIndex = 0;
+  img.src = euphoriaImages[eIndex];
+
+  clearInterval(autoPlay);
+
+  autoPlay = setInterval(() => {
+    eIndex = (eIndex + 1) % euphoriaImages.length;
+    img.src = euphoriaImages[eIndex];
+  }, 2000);
+}
+
+</script>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Echoes of Dina <br>
+  Recommended Browser: Google Chrome; Resolution: 1366 × 768 or above
+</footer>
+
+<!-- ⭐ BACK TO TOP BUTTON (FIXED + WORKING) -->
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+★
+</button>
+
+<!-- ⭐ SHOW/HIDE SCRIPT -->
+<script>
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+</script>
+
+</body>
+</html>
