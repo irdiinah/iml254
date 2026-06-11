@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pastimes | Echoes of Dina</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="pastimes-page">
+
+<div class="navbar">
+  <a href="index.html">Homepage</a>
+
+<!-- PROFILE -->
+  <div class="dropdown">
+    <a href="profile.html">Profile </a>
+    <div class="dropdown-content">
+      <a href="profile.html#identity">Identity</a>
+      <a href="profile.html#preferences">Preferences</a>
+    </div>
+  </div>
+
+  <!-- RELATIONS -->
+  <div class="dropdown">
+    <a href="relations.html">Relations </a>
+    <div class="dropdown-content">
+      <a href="relations.html#familycard">Family Card</a>
+      <a href="relations.html#acquaintances">Acquaintances</a>
+      <a href="relations.html#beloveds">Beloveds</a>
+    </div>
+  </div>
+
+  <!-- ROOTS -->
+  <div class="dropdown">
+    <a href="roots.html">Roots </a>
+    <div class="dropdown-content">
+      <a href="roots.html#hometown">Hometown</a>
+      <a href="roots.html#academia">Academia</a>
+    </div>
+  </div>
+
+  <!-- PASTIMES -->
+  <div class="dropdown">
+    <a href="pastimes.html">Pastimes </a>
+    <div class="dropdown-content">
+      <a href="pastimes.html#trinkets">Trinkets</a>
+      <a href="pastimes.html#screentales">Screen Tales</a>
+      <a href="pastimes.html#whatnot">Whatnot</a>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="dropdown">
+    <a href="archive.html">Archive </a>
+    <div class="dropdown-content">
+      <a href="archive.html#ephemeral">Ephemeral</a>
+    </div>
+  </div>
+
+  <!-- GUESTBOOK -->
+  <div class="dropdown">
+    <a href="guetbook.html">Guestbook </a>
+  </div>
+
+</div>
+
+
+<!-- TRINKETS -->
+<section id="pastimes" section class="pastimes-section">
+
+  <!-- LEFT: TRINKETS -->
+  <div class="trinkets-box">
+
+    <h1 class="trinkets-title">Trinkets</h1>
+
+    <p class="trinkets-sub">
+      Small fragments of things I keep — memories, objects, and quiet pieces of time.
+    </p>
+
+    <div class="trinkets-grid">
+      <img src="images/trinkets1.jpg" title="keychains" onclick="openImg(this.src)">
+      <img src="images/trinkets2.jpg" title="plushies" onclick="openImg(this.src)">
+      <img src="images/trinkets3.jpg" title="toys" onclick="openImg(this.src)">
+    </div>
+
+   </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="pastimes-right">
+
+    <!-- SPINNING DISC + MUSIC -->
+    <div class="music-stack">
+
+      <!-- spinning image -->
+      <img src="images/trinkets4.jpg" class="spinning-disc" id="disc">
+
+      <!-- pill music control -->
+      <div class="music-pill">
+
+        <audio id="music" loop>
+          <source src="songs/coraline.mp3" type="audio/mpeg">
+        </audio>
+
+        <button onclick="toggleMusic()">♪</button>
+        <span>now playing: explorations</span>
+
+      </div>
+
+  </div>
+
+</section>
+
+<!-- IMAGE MODAL -->
+<div id="imgModal" onclick="closeImg()">
+  <img id="modalImg">
+</div>
+
+
+
+
+<!-- SCREEN TALES -->
+<section id="pastimes" section class="pastimes-section">
+
+ <div class="screentales-box">
+
+    <!-- LEFT -->
+    <div class="movie-side">
+
+      <div class="movie-slider">
+
+        <button class="movie-arrow left" onclick="prevMovie()">❮</button>
+
+        <img id="moviePoster" src="images/movie1.jpg">
+
+        <button class="movie-arrow right" onclick="nextMovie()">❯</button>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="movie-details">
+
+      <div class="detail-group">
+        <span class="detail-label">title:</span>
+        <h2 class="detail-data" id="movieTitle"></h2>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">length:</span>
+        <h2 class="detail-data" id="movieLength"></h2>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">creator:</span>
+        <h2 class="detail-data" id="movieCreator"></h2>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">release:</span>
+        <h2 class="detail-data" id="movieRelease"></h2>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">synopsis:</span>
+        <p class="detail-text" id="movieSynopsis"></p>
+      </div>
+
+      <div class="detail-group">
+        <span class="detail-label">genre:</span>
+        <div class="genre-tags" id="movieGenre"></div>
+      </div>
+
+      <div class="movie-rating" id="movieRating">
+ </div>
+
+  </div>
+
+</div>
+
+
+</section>
+
+<!-- WHATNOT -->
+<section class="whatnot-section">
+
+  <div class="whatnot-header">
+    <h1>  𝜗𝜚 ࣪˖ ִWhatnot 𝜗𝜚 ࣪˖ ִ</h1>
+    <p>Activities that taking up my times</p>
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="carousel-viewport">
+    <div class="carousel-track" id="track">
+
+      <div class="card">
+    
+        <img src="images/whatnot1.jpg" title="Reading web comics">
+      </div>
+
+  
+
+      <!-- VIDEO CARD -->
+      <div class="card">
+        <video muted loop autoplay playsinline>
+          <source src="songs/whatnot3.mp4" type="video/mp4"  title="Fish watching">
+        </video>
+
+      </div>
+
+      <div class="card"<div class="card">
+        <img src="images/whatnot4.jpg"  title="playing games">
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</section>
+<script>
+
+const movies = [
+
+{
+  poster:"images/movie1.jpg",
+  rating:"★★★★★",
+  title:"Coraline",
+  length:"1h 40m",
+  creator:"Neil Gaiman",
+  release:"2009",
+  synopsis:"An adventurous 11-year-old girl who discovers a secret, bricked-up door in her new home. It leads to a parallel dimension that mirrors her own, but with a twist: her 'Other' parents are much more attentive, though they want to sew buttons over her eyes and keep her forever.",
+  genres:["Fantasy","Dark Adventure","Mystery"]
+},
+{
+  poster:"images/movie2.jpg",
+  rating:"★★★",
+  title:"Monster High: Haunted",
+  length:"1h 15m ",
+  creator:"Dan Fraga, William Lau",
+  release:"2015",
+  synopsis:"When Spectra Vondergeist goes back to her old ghost school to find out why Monster High is being haunted, the other ghouls use Boogey Sand to transform into ghosts so they can follow her.",
+  genres:["Fantasy", "Adventure", "Comedy","Family"]
+},
+{
+  poster:"images/movie3.jpg",
+  rating:"★★★★",
+  title:"Mean Girls",
+  length:"1h 37m",
+  creator:"Tina Fey",
+  release:"2004",
+  synopsis:"Homeschooled Cady Heron transfers to a suburban American high school after moving from Africa. She befriends two outcasts who encourage her to infiltrate 'The Plastics', an elite, ruthless clique led by the manipulative Regina George. As Cady plots revenge, she becomes just as toxic as the mean girls she set out to destroy",
+  genres:["Comedy","Teen", "Drama"]
+},
+{
+  poster:"images/movie4.jpg",
+  rating:"★★★★★",
+  title:"A Series of Unfortunate Events",
+  length:"S3 E25",
+  creator:"Daniel Handler",
+  release:"2017",
+  synopsis:"The Baudelaire orphans—Violet, Klaus, and Sunny—who are orphaned after a mysterious fire destroys their home. They are relentlessly pursued by the villainous Count Olaf, who schemes to steal their vast inheritance. Along the way, they unravel a massive conspiracy tied to a secret society",
+  genres:["Black Comedy","Adventure","Drama"]
+},
+{
+  poster:"images/movie5.jpg",
+  rating:"★★★★★",
+  title:"Gravity Falls",
+  length:"S2 E40",
+  creator:"Alex Hirsch",
+  release:"2012",
+  synopsis:"12-year-old twins Dipper and Mabel Pines are sent to spend their summer vacation with their eccentric Great-Uncle Stan in the sleepy, paranormal-ridden town of Gravity Falls, Oregon. There, they help Stan run the 'Mystery Shack' while investigating the supernatural secrets hidden in the woods.",
+  genres:["Action-adventure", "Mystery", "Supernatural", "Comedy"]
+},
+{
+   poster:"images/movie6.jpg",
+  rating:"★★★★★",
+  title:"No Home (Jibi Eopseo) ",
+  length:"ch. 269",
+  creator:"Wanan",
+  release:"2018",
+  synopsis:"Haejoon Goh and Eunyung Baek, two high school students with vastly different troubled backgrounds who reluctantly end up sharing an abandoned dorm. It is highly regarded for its deep psychological exploration, realistic portrayal of trauma, and emphasis on found family rather than romance.",
+  genres:["Slice of Life", "Drama", "Comedy", "Coming of Age"]
+},
+{
+  poster:"images/movie7.jpg",
+  rating:"★★★★★",
+  title:"Asobi Asobase: Workshop of Fun",
+ length:"E13",
+  creator:"Rin Suzukawa",
+  release:"2018",
+  synopsis:"Centred on Hanako, Olivia and Kasumi, three friends who are second years at an all-girls middle school. They are the members of the unofficial Pastimers Club where the pastimes in question being talking or doing what they feel like at the time.",
+  genres:["Comedy", "Surreal Comedy", "Slice of Life"]
+}
+
+];
+
+let currentMovie = 0;
+
+function loadMovie(index){
+
+  let m = movies[index];
+
+  document.getElementById("moviePoster").src = m.poster;
+  document.getElementById("movieRating").innerText = m.rating;
+  document.getElementById("movieTitle").innerText = m.title;
+  document.getElementById("movieLength").innerText = m.length;
+  document.getElementById("movieCreator").innerText = m.creator;
+  document.getElementById("movieRelease").innerText = m.release;
+  document.getElementById("movieSynopsis").innerText = m.synopsis;
+
+  let genreBox = document.getElementById("movieGenre");
+  genreBox.innerHTML = "";
+
+  m.genres.forEach(g => {
+    let span = document.createElement("span");
+    span.innerText = g;
+    genreBox.appendChild(span);
+  });
+
+}
+
+function nextMovie(){
+  currentMovie++;
+  if(currentMovie >= movies.length) currentMovie = 0;
+  loadMovie(currentMovie);
+}
+
+function prevMovie(){
+  currentMovie--;
+  if(currentMovie < 0) currentMovie = movies.length - 1;
+  loadMovie(currentMovie);
+}
+
+loadMovie(0);
+
+</script>
+<script>
+
+const track = document.getElementById("track");
+const viewport = document.querySelector(".carousel-viewport");
+const cards = document.querySelectorAll(".card");
+
+let currentX = 0;
+let targetX = 0;
+
+const maxMove = 120; // smaller = smoother
+
+function animate() {
+  currentX += (targetX - currentX) * 0.06;
+
+  track.style.transform = `translateX(${currentX}px)`;
+
+  requestAnimationFrame(animate);
+}
+</script>
+
+<script>
+
+animate();
+
+viewport.addEventListener("mousemove", (e) => {
+
+  const rect = viewport.getBoundingClientRect();
+
+  const mouseX = e.clientX - rect.left;
+
+  // convert to -1 → 1 range (CENTERED control)
+  const percent = ((mouseX / rect.width) - 0.5) * 2;
+
+  targetX = -percent * maxMove; // IMPORTANT: inverted + reduced strength
+});
+
+viewport.addEventListener("mouseleave", () => {
+  targetX = 0; // returns to center
+});
+
+updateCarousel();
+
+setInterval(autoSlide, 4000);
+
+updateCarousel();
+</script>
+
+
+<script>
+/* music toggle */
+function toggleMusic(){
+  let m = document.getElementById("music");
+  if (m.paused) {
+    m.play();
+  } else {
+    m.pause();
+  }
+}
+
+/* image popup open */
+function openImg(src){
+  document.getElementById("imgModal").style.display = "flex";
+  document.getElementById("modalImg").src = src;
+}
+
+/* image popup close */
+function closeImg(){
+  document.getElementById("imgModal").style.display = "none";
+}
+
+</script>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Echoes of Dina<br>
+  Recommended Browser: Google Chrome; 
+  Resolution: 1366 × 768 or above<br>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+★
+</button>
+
+<!--SHOW/HIDE SCRIPT -->
+<script>
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+</script>
+
+
+</body>
+</html>
+
+</body>
+</html>
+
