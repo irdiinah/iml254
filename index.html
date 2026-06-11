@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Homepage | Echoes of Dina</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="homepage-page">
+
+<div class="navbar">
+  <a href="index.html">Homepage</a>
+
+<!-- PROFILE -->
+  <div class="dropdown">
+    <a href="profile.html">Profile </a>
+    <div class="dropdown-content">
+      <a href="profile.html#identity">Identity</a>
+      <a href="profile.html#preferences">Preferences</a>
+    </div>
+  </div>
+
+  <!-- RELATIONS -->
+  <div class="dropdown">
+    <a href="relations.html">Relations </a>
+    <div class="dropdown-content">
+      <a href="relations.html#familycard">Family Card</a>
+      <a href="relations.html#acquaintances">Acquaintances</a>
+      <a href="relations.html#beloveds">Beloveds</a>
+    </div>
+  </div>
+
+  <!-- ROOTS -->
+  <div class="dropdown">
+    <a href="roots.html">Roots </a>
+    <div class="dropdown-content">
+      <a href="roots.html#hometown">Hometown</a>
+      <a href="roots.html#academia">Academia</a>
+    </div>
+  </div>
+
+  <!-- PASTIMES -->
+  <div class="dropdown">
+    <a href="pastimes.html">Pastimes </a>
+    <div class="dropdown-content">
+      <a href="pastimes.html#trinkets">Trinkets</a>
+      <a href="pastimes.html#screentales">Screen Tales</a>
+      <a href="pastimes.html#whatnot">Whatnot</a>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="dropdown">
+    <a href="archive.html">Archive </a>
+    <div class="dropdown-content">
+      <a href="archive.html#ephemeral">Ephemeral</a>
+    </div>
+  </div>
+
+  <!-- GUESTBOOK -->
+  <div class="dropdown">
+    <a href="guetbook.html">Guestbook </a>
+  </div>
+
+</div>
+
+
+
+
+<!-- HEADER -->
+<div class="header">
+
+  <video autoplay muted loop playsinline>
+    <source src="songs/homedp.mp4" type="video/mp4">
+  </video>
+
+  <div class="logo">
+    <img src="images/logo.png"  title="traces of her" >
+  </div>
+
+</div>
+
+<!-- HOME CONTENT -->
+<section>
+
+  <audio id="bgmusic" loop>
+    <source src="songs/dpbg.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="music-controls">
+    <button onclick="document.getElementById('bgmusic').play()">Play</button>
+    <button onclick="document.getElementById('bgmusic').pause()">Pause</button>
+  </div>
+
+  <div class="intro">
+    <h2>Bibbidi-Bobbidi-Boo! ˚˖𓍢ִִֶָ໋🐇་༘࿐˚</h2>
+    <p>This is a space for a quiet archive of identity, emotions, and fragments of time.</p>
+  </div>
+
+  <div class="card">
+    <h3>About This Site</h3>
+    <p>A personal digital vase to hold on my traces.</p>
+
+    <h3>Navigation Guide</h3>
+    <p>Use the menu above to explore different fragments of Dina.</p>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer>
+  © 2026 Echoes of Dina <br>
+  Recommended Browser: Google Chrome; Resolution: 1366 × 768 or above
+</footer>
+
+<!-- ⭐ BACK TO TOP BUTTON (FIXED + WORKING) -->
+<button id="topBtn" title="Back to top"
+onclick="window.scrollTo({top:0, behavior:'smooth'})">
+★
+</button>
+
+<!-- ⭐ SHOW/HIDE SCRIPT -->
+<script>
+window.onscroll = function () {
+  let btn = document.getElementById("topBtn");
+  if (document.documentElement.scrollTop > 200) {
+    btn.classList.add("show");
+  } else {
+    btn.classList.remove("show");
+  }
+};
+</script>
+
+</body>
+</html>
